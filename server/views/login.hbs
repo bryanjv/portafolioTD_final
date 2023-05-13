@@ -1,0 +1,27 @@
+{{#> template}}
+<div class="login">
+	<h1>Login</h1>
+	<form action="/auth" method="post">
+		<label for="username">
+			<i class="fas fa-user"></i>
+		</label>
+		<input type="text" name="username" placeholder="Username" id="username" required>
+		
+		<label for="userpassword">
+			<i class="fas fa-lock"></i>
+		</label>
+		<input type="password" name="userpassword" placeholder="Password" id="userpassword" required>
+		<input type="submit" class="btn btn-primary" value="Login">
+	</form>
+
+	<a href="/register" class="btn btn-primary" role="button">Registro</a>
+</div>
+<div>
+	{{#if mensaje}}
+		{{mensaje}}
+	{{/if}}
+	{{#if alerta}}
+		{{alerta}}
+	{{/if}}
+</div>
+{{/template}}

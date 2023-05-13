@@ -1,0 +1,25 @@
+{{#> template}}
+<form action="/newMenu" method="post">
+	<label for="menuname">
+		<i class="fa-solid fa-signature"></i> Nombre de Menu
+	</label>
+	<input type="text" name="menuname" placeholder="Nombre de Platillo" id="menuname" required><br>
+
+	<label for="price">
+		<i class="fa-solid fa-dollar-sign"></i> Precio
+	</label>
+	<input type="text" name="price" placeholder="Precio" id="price" required> <br>
+
+	<label for="stock">
+		<i class="fa-solid fa-container-storage"></i> Stock
+	</label>
+	<input type="text" name="stock" placeholder="Stock" id="stock" required> <br>
+
+	<label for="category">
+		<i class="fas fa-tag"></i> Categoria
+	</label>
+	<input type="text" name="category" placeholder="Categoria" id="categoria" required><br>
+
+	<input type="submit" class="btn btn-primary" value="Registrarse">
+</form>
+{{/template}}

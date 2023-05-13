@@ -1,0 +1,53 @@
+{{#> template}}
+<form action="/create" method="post">
+	<label for="username">
+		<i class="fa-solid fa-address-card"></i> Nombre de Usuario
+	</label>
+	<input type="text" name="username" placeholder="Username" id="username" required><br>
+
+	<label for="name">
+		<i class="fa-solid fa-user"></i> Nombre
+	</label>
+	<input type="text" name="name" placeholder="Nombre" id="name" required> <br>
+
+	<label for="phone">
+		<i class="fa-solid fa-phone"></i> Telefono
+	</label>
+	<input type="text" name="phone" placeholder="Telefono" id="phone" required> <br>
+
+	<label for="password">
+		<i class="fas fa-lock"></i> Contraseña
+	</label>
+	<input type="password" name="password" placeholder="Password" id="password" required><br>
+
+	<label for="email">
+		<i class="fas fa-envelope"></i> Correo Electronico
+	</label>
+	<input type="email" name="email" placeholder="Email" id="email" required><br>
+
+	<input type="submit" class="btn btn-primary" value="Registrarse" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> 
+</form>
+
+<a class="btn btn-primary" role="button" href="/new">Soy un Restaurant</a>
+<a class="btn btn-primary" role="button" href="/employee">Soy un Empleado</a>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Registro Finalizado</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Usuario creado con exito
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-primary" role="button" href="/">Volver a inicio</a>
+                <a class="btn btn-primary" role="button" href="/login">Ir al login</a>
+            </div>
+        </div>
+    </div>
+</div>
+{{/template}}

@@ -1,0 +1,24 @@
+{{#> template}}
+<table>
+    <thead>
+        <tr>
+            <th>Nombre Restaurant</th>
+            <th>Telefono</th>
+            <th>Comuna</th>
+            <th>Region</th>
+            <th>Perfil</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each restaurants}}
+        <tr>
+            <td><a href="/restaurant/{{restaurantid}}/menu">{{restaurantname}}</a></td>
+            <td>{{restaurantphone}}</td>
+            <td>{{districtname}}</td>
+            <td>{{regionname}}</td>
+            <td><a href="/profile/{{restaurantid}}">Informacion del Restaurant</a></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{/template}}

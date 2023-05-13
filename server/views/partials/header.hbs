@@ -1,0 +1,38 @@
+<section>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                QResturant
+            </a>
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/restaurants">Busca tu QRestaurant</a>
+                    </li>
+                    {{#if loggedin}}
+                    <button type="button" style="text-decoration: none;"><a
+                            href="/logout" class="link">Cerrar Sesion</a></button>
+                    <h5>Bienvenido/a {{username.username}}</h5>
+                    {{else}}
+                    <li class="nav-item" id="login">
+                        <a class="nav-link active" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"
+                            href="/register">Registro</a>
+                    </li>
+                    {{/if}}
+                </ul>
+            </div>
+        </div>
+    </nav>
+</section>

@@ -1,0 +1,30 @@
+{{#> template}}
+<table>
+    <thead>
+        <tr>
+            <th>Nombre Platillo</th>
+            <th>Categoria</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Cantidad a ordenar</th>
+            <th>Ordenar</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each menu}}
+        <tr id="row_{{menuid}}">
+            <td id="menuname_{{menuid}}">{{menuname}}</td>
+            <td>{{categoryname}}</td>
+            <td>{{menuprice}}</td>
+            <td id="stock_{{menuid}}">{{stock}}</td>
+            <td><button id="minus_{{menuid}}" onclick=subtraction({{menuid}})><i class="fa-solid fa-minus"></i></button>
+                <p id="counter_{{menuid}}">1</p>
+                <button id="add_{{menuid}}" onclick=addition({{menuid}})><i class="fa-solid fa-plus"></i></button></td>
+            <td><button onclick="order({{menuid}},{{menuprice}},{{../username.userid}},{{restaurant_id}})">Ordenar</button></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<a href="/checkout" class="btn btn-primary" role="button">Ir al Resumen</a>
+{{/template}}

@@ -1,0 +1,27 @@
+{{#> template}}
+<a href="/newMenu"><i class="fa-solid fa-plus"></i></a>
+<table>
+    <thead>
+        <tr>
+            <th>Nombre Platillo</th>
+            <th>Categoria</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each menu}}
+        <tr>
+            <td>{{menuname}}</td>
+            <td>{{categoryname}}</td>
+            <td>{{menuprice}}</td>
+            <td>{{stock}}</td>
+            <td></td>
+            <td></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{/template}}

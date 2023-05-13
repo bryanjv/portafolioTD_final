@@ -1,0 +1,54 @@
+{{#> template}}
+<form action="/newEmployee" method="post">
+	<label for="username">
+		<i class="fa-solid fa-address-card"></i> Nombre de Usuario
+	</label>
+	<input type="text" name="username" placeholder="Username" id="username" required><br>
+
+	<label for="name">
+		<i class="fa-solid fa-user"></i> Nombre
+	</label>
+	<input type="text" name="name" placeholder="Nombre" id="name" required> <br>
+
+    <label for="restaurant">
+		<i class="fa-solid fa-shop"></i> Restaurant
+	</label>
+    <select name="restaurant" required>
+        <option disabled selected value=""> Selecciona Restaurant de Trabajo</option>
+        {{#each restaurants}}
+        <option value={{restaurantid}}>{{restaurantname}}</option>
+        {{/each}}
+    </select>
+
+    <label for="code">
+		<i class="fa-solid fa-user"></i> Codigo de Autorizacion
+	</label>
+	<input type="text" name="code" placeholder="Codigo de Autorizacion" id="code" required> <br>
+
+	<label for="password">
+		<i class="fas fa-lock"></i> Contraseña
+	</label>
+	<input type="password" name="password" placeholder="Password" id="password" required><br>
+
+	<input type="submit" class="btn btn-primary" value="Registrarse" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> 
+</form>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Registro Finalizado</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Empleado creado con exito
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-primary" role="button" href="/">Volver a inicio</a>
+                <a class="btn btn-primary" role="button" href="/login">Ir al login</a>
+            </div>
+        </div>
+    </div>
+</div>
+{{/template}}

@@ -1,0 +1,56 @@
+{{#> template}}
+<table>
+    <thead>
+        <tr>
+            <th>ID de orden</th>
+            <th>Mesa</th>
+            <th>Fecha de Orden</th>
+            <th>Estado de Orden</th>
+            <th>Cliente</th>
+            <th>Completar</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each orders}}
+        {{#if orderstate}}
+        <tr>
+            <td>{{orderid}}</td>
+            <td>{{ordertable}}</td>
+            <td>{{orderdate}}</td>
+            <td>En curso</td>
+            <td>{{clientname}}</td>
+            <td><a href="/orderComplete/{{orderid}}">Completar pedido</a></td>
+        </tr>
+        {{/if}}
+        {{/each}}
+
+    </tbody>
+</table>
+
+<table id="ordersCompleted">
+    <thead>
+        <tr>
+            <th>ID de orden</th>
+            <th>Mesa</th>
+            <th>Fecha de Orden</th>
+            <th>Estado de Orden</th>
+            <th>Cliente</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each orders}}
+        {{#unless orderstate}}        
+        <tr>
+            <td>{{orderid}}</td>
+            <td>{{ordertable}}</td>
+            <td>{{orderdate}}</td>
+            <td>Completada</td>
+            <td>{{clientname}}</td>
+        </tr>
+        {{/unless}}
+        {{/each}}
+    </tbody>
+</table>
+
+<button onclick="ordersCompleted()" class="btn btn-primary custom-btn-info">Crear Reporte</button>
+{{/template}}

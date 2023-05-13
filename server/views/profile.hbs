@@ -1,0 +1,14 @@
+{{#> template}}
+    <ul>
+        <li>{{info.restaurantname}}</li><br>
+        <li>{{info.restaurantphone}}</li><br>
+        <li>{{info.restaurantemail}}</li><br>
+        <li>{{info.restaurantaddress}}</li><br>
+    </ul>
+
+    {{#if owner}}
+    <a class="btn btn-primary" role="button" href="/inventory">Inventario del Restaurant</a>
+    <a class="btn btn-primary" role="button" href="/orders/{{restaurant.restaurantid}}">Ordenes activas</a>
+    <a class="btn btn-primary" role="button" href="/starFood/{{restaurant.restaurantid}}">Ganancias por menu</a>
+    {{/if}}
+{{/template}}

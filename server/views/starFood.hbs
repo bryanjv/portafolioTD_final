@@ -1,0 +1,18 @@
+{{#> template}}
+<table>
+    <thead>
+        <tr>
+            <th>Nombre del Menu</th>
+            <th>Total Historico</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each starFood}}
+        <tr>
+            <td>{{menuname}}</td>
+            <td>{{total_income}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{/template}}
